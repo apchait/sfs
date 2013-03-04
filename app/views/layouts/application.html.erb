@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-  <title>Sfs</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+	<meta charset="utf-8" />
+	
+	<!-- Uncomment to make IE8 render like IE7 -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title><%= content_for?(:title) ? yield(:title) : "SFS Languages by Matt Schartow" %></title>
+
+	<%= stylesheet_link_tag    "application" %>
+	<%= javascript_include_tag "vendor/custom.modernizr" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<!-- Header and Nav -->
+	<div class="row">
+    <div class="large-5 columns">
+      <h1 style="float:left"><img src="http://www.sfslanguages.com/wp-content/themes/monochrome/img/logo.gif" width='50px' height='50px' /></h1>
+      <h5 class="subheader" style="margin-t0p: 30px">SFS Languages by Matt Schartow</h5>
+  	</div>
+    <div class="large-7 columns">
+      <ul class="right button-group">
+    	<li><a href="#" class="button" data-dropdown="languages-dropdown">Languages</a></li>
+    	<!-- Languages Dropdown -->
+    	<ul id="languages-dropdown" class="f-dropdown">
+  		  <li><a href="#">This is a link</a></li>
+  		  <li><a href="#">This is another</a></li>
+  		  <li><a href="#">Yet another</a></li>
+		</ul>
+    	<!-- End Languages Dropdown -->
+    	<li><a href="#" class="button">Schools</a></li>
+    	<li><a href="#" class="button">Foundations</a></li>
+    	<li><a href="#" class="button">About</a></li>
+    	</ul>
+     </div>
+   </div>
+<!-- End Header and Nav -->
+  <%= yield %>
+  
+  <%= javascript_include_tag "application" %>
 </body>
 </html>
