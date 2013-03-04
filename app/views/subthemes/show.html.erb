@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @subtheme.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @subtheme.description %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @subtheme.image %>
+</p>
+
+<p>
+  <b>Video url:</b>
+  <%= @subtheme.video_url %>
+</p>
+
+<p>
+  <b>Theme:</b>
+  <%= @subtheme.theme_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_subtheme_path(@subtheme) %> |
+<%= link_to 'Back', subthemes_path %>

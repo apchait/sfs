@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @word.text %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @word.description %>
+</p>
+
+<p>
+  <b>Text image:</b>
+  <%= @word.text_image %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @word.image %>
+</p>
+
+<p>
+  <b>Audio:</b>
+  <%= @word.audio %>
+</p>
+
+<p>
+  <b>Pdf:</b>
+  <%= @word.pdf %>
+</p>
+
+<p>
+  <b>Subtheme:</b>
+  <%= @word.subtheme_id %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @word.language_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>

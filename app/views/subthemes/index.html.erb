@@ -1,0 +1,31 @@
+<h1>Listing subthemes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Image</th>
+    <th>Video url</th>
+    <th>Theme</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subthemes.each do |subtheme| %>
+  <tr>
+    <td><%= subtheme.name %></td>
+    <td><%= subtheme.description %></td>
+    <td><%= subtheme.image %></td>
+    <td><%= subtheme.video_url %></td>
+    <td><%= subtheme.theme_id %></td>
+    <td><%= link_to 'Show', subtheme %></td>
+    <td><%= link_to 'Edit', edit_subtheme_path(subtheme) %></td>
+    <td><%= link_to 'Destroy', subtheme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Subtheme', new_subtheme_path %>
