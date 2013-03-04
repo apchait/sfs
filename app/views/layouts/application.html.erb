@@ -44,8 +44,14 @@
           <ul class="dropdown">
             <li><label>Western</label></li>
             <% Language.all.each do |l| %>
-				<li><%= link_to l.name_english, language_path(l) %></li>
-			<% end %>
+				      <li class="has-dropdown"><%= link_to l.name_english, language_path(l) %>
+              <ul class="dropdown">
+                <li><label>Themes</label></li>
+              <% l.themes.each do |t| %>
+                <li><%= link_to t.name, theme_path(t) %></li>
+              <% end %>
+              </ul></li>
+            <% end %>
             <li><a href="#">Dropdown Option</a></li>
             <li><a href="#">Dropdown Option</a></li>
             <li class="divider"></li>
