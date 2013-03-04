@@ -1,25 +1,112 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @theme.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @theme.description %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @theme.image %>
-</p>
-
-<p>
-  <b>Language:</b>
-  <%= @theme.language_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_theme_path(@theme) %> |
-<%= link_to 'Back', themes_path %>
+<div class="row">
+ 
+          <div class="large-6 columns">
+ 
+            <img src="<%= @theme.image %>"><br>
+ 
+          </div>
+ 
+ 
+          <div class="large-6 columns">
+ 
+            <h3 class="show-for-small"><%= @theme.name %><hr/></h3>
+ 
+            <div class="panel">
+              <h4 class="hide-for-small"><%= @theme.name %><hr/></h4>
+            <h5 class="subheader"><%= @theme.description %></h5>
+            </div>
+ 
+          <div class="row">
+              <div class="large-6 small-6 columns">
+                <div class="panel">
+                  <h5>Subtheme</h5>
+                <h6 class="subheader">Praesent placerat dui tincidunt elit suscipit sed.</h6>
+                <a href="#" class="small button">Start!</a>
+                </div>
+              </div>
+ 
+              <div class="large-6 small-6 columns">
+                <div class="panel">
+                  <h5>Subtheme</h5>
+                <h6 class="subheader">Praesent placerat dui tincidunt elit suscipit sed.</h6>
+                <a href="#" class="small button">Start!</a>
+                </div>
+              </div>
+          </div>
+ 
+          </div>
+ 
+        </div>
+ 
+      <!-- End Header Content -->
+ 
+ 
+      <!-- Search Bar -->
+ 
+        <div class="row">
+ 
+          <div class="large-12 columns">
+            <div class="radius panel">
+ 
+            <form>
+              <div class="row collapse">
+ 
+                <div class="large-10 small-8 columns">
+                  <input type="text" />
+                </div>
+ 
+                <div class="large-2 small-3 columns">
+                  <a href="#" class="postfix button expand">Search</a>
+                </div>
+ 
+              </div>
+            </form>
+ 
+          </div>
+          </div>
+ 
+        </div>
+ 
+      <!-- End Search Bar -->
+ 
+ 
+      <!-- Thumbnails -->
+ 
+        <div class="row">
+ 
+          <div class="large-12 show-for-small columns">
+          <h3>Header</h3><hr>
+        </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Word">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Word">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Word">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Word">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+        </div>
+ 
+      <!-- End Thumbnails -->

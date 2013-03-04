@@ -29,6 +29,7 @@
 
 // We use these as default colors throughout
 // $primary-color: #2ba6cb;
+// $primary-color: #f7f7f7;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
 // $success-color: #5da423;
@@ -804,6 +805,7 @@
 
 // We use these to control link styles.
 // $side-nav-link-color: $primary-color;
+// $side-nav-link-color: 555;
 // $side-nav-link-color-active: lighten(#000, 30%);
 // $side-nav-font-size: emCalc(14px);
 // $side-nav-font-weight: bold;
@@ -946,7 +948,7 @@
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+$topbar-bg: #f7f7f7;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -960,7 +962,7 @@
 // $topbar-title-font-size: emCalc(17px);
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
+$topbar-link-color: #555;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: emCalc(13px);
 
@@ -976,9 +978,11 @@
 // $topbar-menu-link-font-size: emCalc(13px);
 // $topbar-menu-link-weight: bold;
 // $topbar-menu-link-color: #fff;
+$topbar-menu-link-color: #555;
 // $topbar-menu-icon-color: #fff;
-// $topbar-menu-link-color-toggled: #888;
-// $topbar-menu-icon-color-toggled: #888;
+$topbar-menu-icon-color: #555;
+// $topbar-menu-link-color-toggled: #E9E9E9;
+// $topbar-menu-icon-color-toggled: #E9E9E9;
 
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;

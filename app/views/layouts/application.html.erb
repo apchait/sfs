@@ -20,29 +20,54 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<!-- Header and Nav -->
-	<div class="row">
-    <div class="large-5 columns">
-      <h1 style="float:left"><img src="http://www.sfslanguages.com/wp-content/themes/monochrome/img/logo.gif" width='50px' height='50px' /></h1>
-      <h5 class="subheader" style="margin-t0p: 30px">SFS Languages by Matt Schartow</h5>
-  	</div>
-    <div class="large-7 columns">
-      <ul class="right button-group">
-    	<li><a href="#" class="button" data-dropdown="languages-d">Languages</a></li>
-    	<!-- Languages Dropdown -->
-    	<ul id="drop1" class="f-dropdown">
-  		  <li><a href="#">This is a link</a></li>
-  		  <li><a href="#">This is another</a></li>
-  		  <li><a href="#">Yet another</a></li>
-		</ul>
-    	<!-- End Languages Dropdown -->
-    	<li><a href="#" class="button">Schools</a></li>
-    	<li><a href="#" class="button">Foundations</a></li>
-    	<li><a href="#" class="button">About</a></li>
-    	</ul>
-     </div>
-   </div>
-<!-- End Header and Nav -->
+	<!-- Header and Nav -->
+	<!-- Navigation -->
+ 
+  <nav class="top-bar">
+    <ul class="title-area" width="400px">
+      <!-- Title Area -->
+      <li class="name">
+      	<h1 style='float:left'><img src="http://www.sfslanguages.com/wp-content/themes/monochrome/img/logo.gif" width="50px" height="50px"/></h1>
+        <h5>
+			by Matt Schartow
+        </h5>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+    </ul>
+ 
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Languages</a>
+          <ul class="dropdown">
+            <li><label>Western</label></li>
+            <% Language.all.each do |l| %>
+				<li><%= link_to l.name_english, language_path(l) %></li>
+			<% end %>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><label>Eastern</label></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><a href="#">See all &rarr;</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li><a href="#">About</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Schools</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Foundations</a></li>
+      </ul>
+    </section>
+  </nav>
+  <!-- End Top Bar -->
+	<!-- End Header and Nav -->
   <%= yield %>
   
   <%= javascript_include_tag "application" %>
