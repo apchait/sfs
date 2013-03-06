@@ -22,7 +22,9 @@
 
 <p>
   <b>Audio:</b>
-  <%= @word.audio %>
+  <audio controls>
+    <source src="<%= @word.audio %>" type="audio/mpeg">
+  </audio>
 </p>
 
 <p>
