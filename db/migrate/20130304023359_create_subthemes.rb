@@ -2,6 +2,7 @@ class CreateSubthemes < ActiveRecord::Migration
   def change
     create_table :subthemes do |t|
       t.string :name
+      t.string :name_original
       t.string :description
       t.string :image
       t.string :video_url

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306060420) do
+ActiveRecord::Schema.define(:version => 20130306064453) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,9 +46,20 @@ ActiveRecord::Schema.define(:version => 20130306060420) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "documents", :force => true do |t|
+    t.integer  "language_id"
+    t.integer  "theme_id"
+    t.integer  "subtheme_id"
+    t.integer  "word_id"
+    t.string   "url"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "languages", :force => true do |t|
+    t.string   "name"
     t.string   "name_original"
-    t.string   "name_english"
     t.string   "description"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
@@ -56,25 +67,28 @@ ActiveRecord::Schema.define(:version => 20130306060420) do
 
   create_table "subthemes", :force => true do |t|
     t.string   "name"
+    t.string   "name_original"
     t.string   "description"
     t.string   "image"
     t.string   "video_url"
     t.integer  "theme_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "themes", :force => true do |t|
     t.string   "name"
+    t.string   "name_original"
     t.string   "description"
     t.string   "image"
     t.integer  "language_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "words", :force => true do |t|
     t.string   "text_english"
+    t.string   "text_original"
     t.string   "description"
     t.string   "text_image"
     t.string   "image"
@@ -84,7 +98,6 @@ ActiveRecord::Schema.define(:version => 20130306060420) do
     t.integer  "language_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
-    t.string   "text_original"
   end
 
 end

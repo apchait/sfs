@@ -1,7 +1,8 @@
 class CreateWords < ActiveRecord::Migration
   def change
     create_table :words do |t|
-      t.string :text
+      t.string :text_english
+      t.string :text_original
       t.string :description
       t.string :text_image
       t.string :image
