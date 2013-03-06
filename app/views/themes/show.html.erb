@@ -35,10 +35,16 @@
                 </div>
               </div>
           </div>
- 
-          </div>
- 
+          <p>
+            <b>Documents:</b>
+            <ul>
+            <% @theme.documents.each do |d| %>
+              <li><%= link_to d.description, d.url %></li>
+            <% end %>
+            </ul>
+          </p>
         </div>
+      </div>
  
       <!-- End Header Content -->
  
