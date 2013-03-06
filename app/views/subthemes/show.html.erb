@@ -25,6 +25,12 @@
   <%= @subtheme.theme_id %>
 </p>
 
+<p>
+  <b>Words:</b>
+  <% @subtheme.words.each do |w| %>
+    <%= w.text %>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_subtheme_path(@subtheme) %> |
 <%= link_to 'Back', subthemes_path %>

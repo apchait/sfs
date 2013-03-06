@@ -18,14 +18,15 @@
             </div>
  
           <div class="row">
+            <% @theme.subthemes.each do |s| %>
               <div class="large-6 small-6 columns">
                 <div class="panel">
-                  <h5>Subtheme</h5>
-                <h6 class="subheader">Praesent placerat dui tincidunt elit suscipit sed.</h6>
-                <a href="#" class="small button">Start!</a>
+                  <h5><%= s.name %></h5>
+                <h6 class="subheader"><%= s.description %></h6>
+                <%= link_to 'Start!', subtheme_path(s), :class => "small button" %>
                 </div>
               </div>
- 
+            <% end %>
               <div class="large-6 small-6 columns">
                 <div class="panel">
                   <h5>Subtheme</h5>

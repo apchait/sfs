@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130304023427) do
+ActiveRecord::Schema.define(:version => 20130306060420) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(:version => 20130304023427) do
   end
 
   create_table "words", :force => true do |t|
-    t.string   "text"
+    t.string   "text_english"
     t.string   "description"
     t.string   "text_image"
     t.string   "image"
@@ -82,8 +82,9 @@ ActiveRecord::Schema.define(:version => 20130304023427) do
     t.string   "pdf"
     t.integer  "subtheme_id"
     t.integer  "language_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "text_orginal"
   end
 
 end
