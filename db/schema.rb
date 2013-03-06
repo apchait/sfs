@@ -82,9 +82,9 @@ ActiveRecord::Schema.define(:version => 20130306060420) do
     t.string   "pdf"
     t.integer  "subtheme_id"
     t.integer  "language_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.string   "text_orginal"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "text_original"
   end
 
 end

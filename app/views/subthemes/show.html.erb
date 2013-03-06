@@ -28,7 +28,7 @@
 <p>
   <b>Words:</b>
   <% @subtheme.words.each do |w| %>
-    <%= w.text %>
+    <%= link_to w.text_english, word_path(w) %>
   <% end %>
 </p>
 
