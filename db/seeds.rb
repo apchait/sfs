@@ -13,7 +13,7 @@ spanish = Language.create! name: 'Spanish', name_original: 'Español'
 trip_theme = Theme.create! name: 'A Trip', name_original: 'El Viaje', description: 'Going on Vacation!', image: 'http://people.ischool.berkeley.edu/~ariel/sfs/img/trip.jpg', language_id: spanish.id
 hotel_subtheme = Subtheme.create! name: 'Hotel', description: 'Where you sleep when on a trip', video_url: 'https://vimeo.com/61150433', theme_id: trip_theme.id
 Word.create([
-	{ text_english: 'Bathroom' , text_original: 'El Baño', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/bathroom.mp3', subtheme_id: hotel_subtheme.id },
+	{ text_english: 'Bathroom' , text_original: 'El Baño', audio: 'http://fivesomnimedia.com/projects/sfs/audio/bathroom_spanish.mp3', image: 'http://fivesomnimedia.com/projects/sfs/images/bathroom.jpg', pdf: 'http://fivesomnimedia.com/projects/sfs/flashcards/bathroom_flashcards.pdf', subtheme_id: hotel_subtheme.id },
 	{ text_english: 'Bed', text_original: 'La Cama', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/bed.mp3', subtheme_id: hotel_subtheme.id },
 	{ text_english: 'Gift Shop', text_original: 'La Tienda de Regalos', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/gift_shop.mp3', subtheme_id: hotel_subtheme.id },
 	{ text_english: 'Guest', text_original: 'El Huésped', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/guest.mp3', subtheme_id: hotel_subtheme.id },
