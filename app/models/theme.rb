@@ -1,5 +1,5 @@
 class Theme < ActiveRecord::Base
-  attr_accessible :description, :image, :language_id, :name
+  attr_accessible :description, :image, :language_id, :name, :name_original
 
   validates :name, :uniqueness => true
   belongs_to :language
