@@ -1,4 +1,33 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+
+          <div class="large-6 columns">
+              <audio controls>
+                <source src="<%= @word.audio %>" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+          </div>
+ 
+          <div class="large-6 columns">
+            <img src="<%= @word.image %>"><br>
+          </div>
+
+          <div class="row">
+            <div class="large-6 small-6 columns">
+              <div class="panel">
+                <h5><%= @word.text_english %></h5>
+                <h6 class="subheader"><%= @word.text_original %></h6>
+                <h6 class="subheader"><%= @word.text_image %></h6>
+                <h6 class="subheader"><%= @word.description %></h6>
+                <p>
+                  Subtheme: <%= @word.subtheme_id %>
+                </p>
+                <%= link_to @word.pdf, @word.pdf, :class => "small button" %>
+              </div>
+            </div>
+          </div>
+
+</div>
 
 <p>
   <b>Text:</b>
@@ -6,7 +35,7 @@
 </p>
 
 <p>
-  <b>Text Origina:</b>
+  <b>Text Original:</b>
   <%= @word.text_original %>
 </p>
 
