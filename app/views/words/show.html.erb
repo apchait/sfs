@@ -1,17 +1,58 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
 
-          <div class="large-6 columns">
-              <audio controls>
-                <source src="<%= @word.audio %>" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-          </div>
- 
-          <div class="large-6 columns">
-            <img src="<%= @word.image %>"><br>
+          <div class="row">
+            <div class="large-6 columns">
+              <h5><%= @word.text_english %></h5>
+              
+              <h6 class="subheader"><%= @word.text_original %></h6>
+              <h6 class="subheader"><%= @word.text_image %></h6>
+            </div>
+            <div class="large-3 columns" style="text-align:right;">
+                <%= link_to "View Flashcards", @word.pdf, :class => "small button" %>
+            </div>
           </div>
 
+          <div class="row">
+            <div class="large-6 columns">
+                <audio controls loop style="width:400px;">
+                  <source src="<%= @word.audio %>" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="large-3 columns">
+              <ul class="inline-list" style="float:right;">
+                <li><a href="#">A</a></li>
+                <li><a href="#">E</a></li>
+                <li><a href="#">F</a></li>
+                <li><a href="#">M</a></li>
+                <li><a href="#">V</a></li>
+              </ul>
+            </div>
+          </div>
+ 
+          <div class="row">
+            <div class="large-9 columns">
+              <img src="<%= @word.image %>"><br>
+            </div>
+          </div>
+          
+          <div class="row" style="margin-top:50px;">
+            <div class="large-9 columns">
+              <h6>Choose the same word in another language:</h6>
+              <ul class="inline-list">
+                <li><a href="#">Arabic</a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">French</a></li>
+                <li><a href="#">Mandarin</a></li>
+                <li><a href="#">Vietnamese</a></li>
+              </ul>
+            </div>
+          </div>
+          
+</div>
+
+<!-- 
           <div class="row">
             <div class="large-6 small-6 columns">
               <div class="panel">
@@ -19,16 +60,13 @@
                 <h6 class="subheader"><%= @word.text_original %></h6>
                 <h6 class="subheader"><%= @word.text_image %></h6>
                 <h6 class="subheader"><%= @word.description %></h6>
-                <p>
-                  Subtheme: <%= @word.subtheme_id %>
-                </p>
-                <%= link_to @word.pdf, @word.pdf, :class => "small button" %>
+                <%= link_to "View PDF", @word.pdf, :class => "small button" %>
               </div>
             </div>
           </div>
+-->
 
-</div>
-
+<!-- 
 <p>
   <b>Text:</b>
   <%= @word.text_english %>
@@ -80,3 +118,4 @@
 
 <%= link_to 'Edit', edit_word_path(@word) %> |
 <%= link_to 'Back', words_path %>
+-->
