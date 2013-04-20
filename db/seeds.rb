@@ -12,8 +12,8 @@
 spanish = Language.create! name: 'Spanish', name_original: 'Español'
 
 trip_theme = Theme.create! name: 'The Trip', name_original: 'El Viaje', description: 'Going on Vacation!', image: 'http://people.ischool.berkeley.edu/~ariel/sfs/img/trip.jpg', language_id: spanish.id
-hotel_subtheme = Subtheme.create! name: 'The Hotel', description: 'Where you sleep when on a trip', video_url: 'https://vimeo.com/61150433', theme_id: trip_theme.id
-beach_subtheme = Subtheme.create! name: 'The Beach', description: 'Where you go to swim and play', video_url: 'https://vimeo.com/61150433', theme_id: trip_theme.id
+hotel_subtheme = Subtheme.create! name: 'The Hotel', description: 'Where you sleep when on a trip', image: 'http://people.ischool.berkeley.edu/~ariel/sfs/img/trip.jpg', video_url: 'https://vimeo.com/61150433', theme_id: trip_theme.id
+beach_subtheme = Subtheme.create! name: 'The Beach', description: 'Where you go to swim and play', image: 'http://people.ischool.berkeley.edu/~ariel/sfs/img/trip.jpg', video_url: 'https://vimeo.com/61150433', theme_id: trip_theme.id
 
 house_theme = Theme.create! name: 'The House', name_original: 'La Casa', description: 'Your home!', image: 'http://people.ischool.berkeley.edu/~ariel/sfs/img/trip.jpg', language_id: spanish.id
 livingroom_subtheme = Subtheme.create! name: 'The Living Room', description: 'Where you hang out with people', video_url: 'https://vimeo.com/61150433', theme_id: house_theme.id
@@ -50,17 +50,17 @@ Word.create([
 	{ text_english: 'Play', text_original: 'La Toalla', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/towel.mp3', subtheme_id: beach_subtheme.id }
 ])
 
-# House Words
+# Livingroom Words
 Word.create([
-	{ text_english: 'Fireplace' , text_original: 'El Baño', audio: 'http://fivesomnimedia.com/projects/sfs/audio/bathroom_spanish.mp3', image: 'http://fivesomnimedia.com/projects/sfs/images/bathroom.jpg', pdf: 'http://fivesomnimedia.com/projects/sfs/flashcards/bathroom_flashcards.pdf', subtheme_id: house_subtheme.id },
-	{ text_english: 'Staircase', text_original: 'La Cama', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/bed.mp3', subtheme_id: hotel_subtheme.id },
-	{ text_english: 'Telephone', text_original: 'La Tienda de Regalos', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/gift_shop.mp3', subtheme_id: hotel_subtheme.id },
-	{ text_english: 'Couch', text_original: 'El Huésped', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/guest.mp3', subtheme_id: hotel_subtheme.id },
-	{ text_english: 'Lamp', text_original: 'La Llave', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/key.mp3', subtheme_id: hotel_subtheme.id },
-	{ text_english: 'Window', text_original: 'La Piscina', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/pool.mp3', subtheme_id: hotel_subtheme.id },
-	{ text_english: 'Rug', text_original: 'La Habitación', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/room.mp3', subtheme_id: hotel_subtheme.id },
-	{ text_english: 'Television Set', text_original: 'Ir de Compras', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/to_go_shopping.mp3', subtheme_id: hotel_subtheme.id },
-	{ text_english: 'Remote', text_original: 'Relajar', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/to_relax.mp3', subtheme_id: hotel_subtheme.id }
+	{ text_english: 'Fireplace' , text_original: 'El Baño', audio: 'http://fivesomnimedia.com/projects/sfs/audio/bathroom_spanish.mp3', image: 'http://fivesomnimedia.com/projects/sfs/images/bathroom.jpg', pdf: 'http://fivesomnimedia.com/projects/sfs/flashcards/bathroom_flashcards.pdf', subtheme_id: livingroom_subtheme.id },
+	{ text_english: 'Staircase', text_original: 'La Cama', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/bed.mp3', subtheme_id: livingroom_subtheme.id },
+	{ text_english: 'Telephone', text_original: 'La Tienda de Regalos', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/gift_shop.mp3', subtheme_id: livingroom_subtheme.id },
+	{ text_english: 'Couch', text_original: 'El Huésped', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/guest.mp3', subtheme_id: livingroom_subtheme.id },
+	{ text_english: 'Lamp', text_original: 'La Llave', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/key.mp3', subtheme_id: livingroom_subtheme.id },
+	{ text_english: 'Window', text_original: 'La Piscina', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/pool.mp3', subtheme_id: livingroom_subtheme.id },
+	{ text_english: 'Rug', text_original: 'La Habitación', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/room.mp3', subtheme_id: livingroom_subtheme.id },
+	{ text_english: 'Television Set', text_original: 'Ir de Compras', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/to_go_shopping.mp3', subtheme_id: livingroom_subtheme.id },
+	{ text_english: 'Remote', text_original: 'Relajar', audio: 'http://people.ischool.berkeley.edu/~ariel/sfs/audio/to_relax.mp3', subtheme_id: livingroom_subtheme.id }
 ])
 
 # Bedroom Words
@@ -79,5 +79,9 @@ Word.create([
 Document.create([
 	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/hotel_flashcards.pdf', description: 'Hotel Flashcards', subtheme_id: hotel_subtheme.id },
 	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/hotel_worksheets.pdf', description: 'Hotel Worksheets', subtheme_id: hotel_subtheme.id},
+	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/trip.pdf', description: 'Trip PDF', theme_id: trip_theme.id},
+	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/hotel_flashcards.pdf', description: 'Beach Flashcards', subtheme_id: beach_subtheme.id },
+	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/hotel_worksheets.pdf', description: 'Beach Worksheets', subtheme_id: beach_subtheme.id},
 	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/trip.pdf', description: 'Trip PDF', theme_id: trip_theme.id}
+
 ])
