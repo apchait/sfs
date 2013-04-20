@@ -1,42 +1,52 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
+          <!-- <div class="large-12 columns">
+            <p>
+            <a href="/themes/1">The Trip</a> : <a href="/subthemes/1"> The Hotel</a>
+            </p>
+          </div> -->
 
-          <div class="large-3 columns">
-            <h3>Theme Name <!-- <%= @subtheme.theme_id %> --></h3>
-
-            <h3 class="show-for-small"><%= @subtheme.name %><hr/></h3>
+          <div class="large-12 columns">
+            <!-- <h3 class="show-for-small"><%= @subtheme.name %><hr/></h3> -->
  
             <div class="panel">
-              <h4 class="hide-for-small"><%= @subtheme.name %><hr/></h4>
-              <h5 class="subheader"><%= @subtheme.description %></h5>
+              <div class="row">
+                <div class="large-6 columns">
+                  <h4 class="hide-for-small"><%= @subtheme.name %><br/>
+                    <span class="subheader"><%= @subtheme.description %></span>
+                  </h4>
+                </div>
               
-              <p>
-                <h6>Download the Flashcard and Worksheet PDFs</h6>
-                <ul>
-                <% @subtheme.documents.each do |d| %>
-                  <li><%= link_to d.description, d.url %></li>
-                <% end %>
-                </ul>
-              </p>
-              
+                <div class="large-6 columns right" style="text-align:right;">
+                  <ul style="list-style:none;float:right;margin-bottom:0;">
+                  <% @subtheme.documents.each do |d| %>
+                    <li style="float:left;margin-right:5px;"><%= link_to d.description, d.url, :class => "small button" %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-          
-          <div class="large-6 columns">
- 
-            <img src="<%= @subtheme.image %>"><br>
- 
-          </div>
-          
-</div>
 
+          </div>
+</div>
+          
 <div class="row">
-  <ul>
-    <% @subtheme.words.each do |w| %>
-      <li><%= link_to w.text_english, word_path(w) %></li>
-    <% end %>
-  </ul>
-  
+          <div class="large-12 columns">
+            <p style="font-size:80%;">
+            <a href="/themes/1">The Trip</a> > <a href="/subthemes/1"> The Hotel</a>
+            </p>
+          </div>
+          <div class="large-3 columns">
+            <ul style="list-style:none;">
+              <% @subtheme.words.each do |w| %>
+                <li><%= link_to w.text_english, word_path(w) %></li>
+              <% end %>
+            </ul>
+          </div>
+
+          <div class="large-6 columns">
+            <img src="<%= @subtheme.image %>"><br>
+          </div>
 </div>
 
 

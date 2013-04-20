@@ -1,3 +1,18 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Fix for the top nav bar hover state
+.top-bar-section li a:not(.button):hover {
+background: white;
+}
+
+.top-bar-section .dropdown li a {
+color: #555;
+line-height: 1;
+white-space: nowrap;
+padding: 7px 15px;
+background: white;
+font-weight:bold;
+border: 2px solid #f7f7f7;
+}

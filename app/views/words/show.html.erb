@@ -1,54 +1,66 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
+          <div class="row">
+                    <div class="large-12 columns">
+                      <p style="font-size:80%;">
+                      <a href="/themes/1">The Trip</a> > <a href="/subthemes/1"> The Hotel</a>
+                      </p>
+                    </div>
+                    <div class="large-3 columns">
+                      <ul style="list-style:none;">
+                        <li>Word 1</li>
+                        <li>Word 2</li>
+                        <li>Word 3</li>
+                        <li>Word 4</li>
+                      </ul>
+                    </div>
 
-          <div class="row">
-            <div class="large-6 columns">
-              <h5><%= @word.text_english %></h5>
-              
-              <h6 class="subheader"><%= @word.text_original %></h6>
-              <h6 class="subheader"><%= @word.text_image %></h6>
-            </div>
-            <div class="large-3 columns" style="text-align:right;">
-                <%= link_to "View Flashcards", @word.pdf, :class => "small button" %>
-            </div>
-          </div>
+                    <div class="large-9 columns">
+                      <div class="row">
+                        <div class="large-12 columns">
+                          <h5><%= @word.text_english %></h5>
+            
+                          <h6 class="subheader"><%= @word.text_original %></h6>
+                          <h6 class="subheader"><%= @word.text_image %></h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="large-6 columns">
+                          <audio controls loop style="width:400px;">
+                            <source src="<%= @word.audio %>" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                          </audio>
+                        </div>
 
-          <div class="row">
-            <div class="large-6 columns">
-                <audio controls loop style="width:400px;">
-                  <source src="<%= @word.audio %>" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="large-3 columns">
-              <ul class="inline-list" style="float:right;">
-                <li><a href="#">A</a></li>
-                <li><a href="#">E</a></li>
-                <li><a href="#">F</a></li>
-                <li><a href="#">M</a></li>
-                <li><a href="#">V</a></li>
-              </ul>
-            </div>
-          </div>
- 
-          <div class="row">
-            <div class="large-9 columns">
-              <img src="<%= @word.image %>"><br>
-            </div>
-          </div>
+                        <div class="large-6 columns">
+                          <ul class="inline-list right">
+                            <li><a href="#">A</a></li>
+                            <li><a href="#">E</a></li>
+                            <li><a href="#">F</a></li>
+                            <li><a href="#">M</a></li>
+                            <li><a href="#">V</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                      
+                    <div class="large-9 columns">
+                      <img src="<%= @word.image %>"><br>
+                    </div>
           
-          <div class="row" style="margin-top:50px;">
-            <div class="large-9 columns">
-              <h6>Choose the same word in another language:</h6>
-              <ul class="inline-list">
-                <li><a href="#">Arabic</a></li>
-                <li><a href="#">English</a></li>
-                <li><a href="#">French</a></li>
-                <li><a href="#">Mandarin</a></li>
-                <li><a href="#">Vietnamese</a></li>
-              </ul>
-            </div>
+                    <div class="large-9 columns" style="margin-top:50px;">
+                      <h6>Choose the same word in another language:</h6>
+                      <ul class="inline-list">
+                        <li><a href="#">Arabic</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">French</a></li>
+                        <li><a href="#">Mandarin</a></li>
+                        <li><a href="#">Vietnamese</a></li>
+                      </ul>
+                    </div>
           </div>
+
+ 
           
 </div>
 

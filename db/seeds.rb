@@ -79,6 +79,7 @@ Word.create([
 Document.create([
 	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/hotel_flashcards.pdf', description: 'Hotel Flashcards', subtheme_id: hotel_subtheme.id },
 	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/hotel_worksheets.pdf', description: 'Hotel Worksheets', subtheme_id: hotel_subtheme.id},
+	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/hotel_coloringbook.pdf', description: 'Hotel Coloring Book', subtheme_id: hotel_subtheme.id},
 	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/trip.pdf', description: 'Trip PDF', theme_id: trip_theme.id},
 	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/hotel_flashcards.pdf', description: 'Beach Flashcards', subtheme_id: beach_subtheme.id },
 	{ url:'http://people.ischool.berkeley.edu/~ariel/sfs/pdf/hotel_worksheets.pdf', description: 'Beach Worksheets', subtheme_id: beach_subtheme.id},
