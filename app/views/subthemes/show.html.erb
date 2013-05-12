@@ -33,7 +33,7 @@
 <div class="row">
           <div class="large-12 columns">
             <p style="font-size:80%;">
-            <a href="/themes/1">The Trip</a> > <a href="/subthemes/1"> The Hotel</a>
+            <%= link_to @subtheme.theme.name, theme_path(@subtheme.theme) %> > <%= @subtheme.name %>
             </p>
           </div>
           <div class="large-3 columns">
