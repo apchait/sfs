@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
-          <!-- <div class="large-12 columns">
-            <p>
-            <a href="/themes/1">The Trip</a> : <a href="/subthemes/1"> The Hotel</a>
+          <div class="large-12 columns">
+            <p style="font-size:80%;">
+            <a href="/themes/1">The Trip</a> > <a href="/subthemes/<%= @subtheme.id %>"> <%= @subtheme.name %></a>
             </p>
-          </div> -->
+          </div>
 
           <div class="large-12 columns">
-            <!-- <h3 class="show-for-small"><%= @subtheme.name %><hr/></h3> -->
- 
-            <div class="panel">
+
+            <div class="panel" style="padding-top:.5em;padding-bottom:.5em;">
               <div class="row">
                 <div class="large-6 columns">
                   <h4 class="hide-for-small"><%= @subtheme.name %><br/>
@@ -18,7 +17,7 @@
                 </div>
               
                 <div class="large-6 columns right" style="text-align:right;">
-                  <ul style="list-style:none;float:right;margin-bottom:0;">
+                  <ul style="list-style:none;float:right;margin-top:10px;margin-bottom:0;">
                   <% @subtheme.documents.each do |d| %>
                     <li style="float:left;margin-right:5px;"><%= link_to d.description, d.url, :class => "small button" %></li>
                   <% end %>
@@ -31,11 +30,6 @@
 </div>
           
 <div class="row">
-          <div class="large-12 columns">
-            <p style="font-size:80%;">
-            <a href="/themes/1">The Trip</a> > <a href="/subthemes/1"> The Hotel</a>
-            </p>
-          </div>
           <div class="large-3 columns">
             <ul style="list-style:none;">
               <% @subtheme.words.each do |w| %>
@@ -96,3 +90,25 @@
 <%= link_to 'Edit', edit_subtheme_path(@subtheme) %> |
 <%= link_to 'Back', subthemes_path %>
  -->
+
+
+  <!-- Footer -->
+  
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-6 columns">
+          <p>&copy; Copyright SFS Languages</p>
+        </div>
+        <!-- <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </div> 
+  </footer>

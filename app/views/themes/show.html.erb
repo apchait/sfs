@@ -1,9 +1,34 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
+          <div class="large-12 columns">
+
+            <div class="panel" style="padding-top:.5em;padding-bottom:.5em;">
+              <div class="row">
+                <div class="large-6 columns">
+                  <h4 class="hide-for-small"><%= @theme.name %><br/>
+                    <span class="subheader"><%= @theme.description %></span>
+                  </h4>
+                </div>
+
+                <div class="large-6 columns right" style="text-align:right;">
+                  <ul style="list-style:none;float:right;margin-top:10px;margin-bottom:0;">
+                    <% @theme.documents.each do |d| %>
+                      <li><%= link_to d.description, d.url, :class => "small button" %></li>
+                    <% end %>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+</div>
+
+<div class="row">
  
           <div class="large-6 columns">
  
-            <h3 class="show-for-small"><%= @theme.name %><hr/></h3>
+            <!-- <h3 class="show-for-small"><%= @theme.name %><hr/></h3>
  
             <div class="panel">
               <h4 class="hide-for-small"><%= @theme.name %><hr/></h4>
@@ -13,18 +38,18 @@
                 <li><%= link_to d.description, d.url, :class => "small button" %></li>
               <% end %>
               </ul>
-            </div>
+            </div> -->
  
           <div class="row">
+            <div class="columns">
             <% @theme.subthemes.each do |s| %>
-              <div class="large-6 small-6 columns">
                 <div class="panel">
                   <h5><%= s.name %></h5>
-                <h6 class="subheader"><%= s.description %></h6>
-                <%= link_to 'Start!', subtheme_path(s), :class => "small button" %>
+                  <h6 class="subheader"><%= s.description %></h6>
+                  <%= link_to 'Start!', subtheme_path(s), :class => "small button" %>
                 </div>
-              </div>
             <% end %>
+            </div>
               <!-- <div class="large-6 small-6 columns">
                 <div class="panel">
                   <h5>Subtheme</h5>
@@ -123,3 +148,25 @@
         </div> -->
  
       <!-- End Thumbnails -->
+      
+      
+  <!-- Footer -->
+  
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-6 columns">
+          <p>&copy; Copyright SFS Languages</p>
+        </div>
+        <!-- <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div> -->
+      </div>
+    </div> 
+  </footer>
