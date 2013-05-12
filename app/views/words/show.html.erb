@@ -34,34 +34,6 @@
 
 
           <div class="row">
-                    <!-- <div class="large-3 columns">
-                      <ul style="list-style:none;">
-                        <li>Word 1</li>
-                        <li>Word 2</li>
-                        <li>Word 3</li>
-                        <li>Word 4</li>
-                      </ul>
-                    </div> -->
-
-                    <!-- <div class="large-9 columns">
-                      <div class="row">
-                        <div class="large-12 columns">
-                          <h5><%= @word.text_english %></h5>
-            
-                          <h6 class="subheader"><%= @word.text_original %></h6>
-                          <h6 class="subheader"><%= @word.text_image %></h6>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="large-6 columns">
-                          <audio controls loop style="width:400px;">
-                            <source src="<%= @word.audio %>" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                          </audio>
-                        </div>
-                      </div>
-                    </div> -->
-                      
                     <div class="large-8 push-2 columns">
                       <img src="<%= @word.image %>"><br>
                     </div>
@@ -83,91 +55,23 @@
           
 </div>
 
-<!-- 
-          <div class="row">
-            <div class="large-6 small-6 columns">
-              <div class="panel">
-                <h5><%= @word.text_english %></h5>
-                <h6 class="subheader"><%= @word.text_original %></h6>
-                <h6 class="subheader"><%= @word.text_image %></h6>
-                <h6 class="subheader"><%= @word.description %></h6>
-                <%= link_to "View PDF", @word.pdf, :class => "small button" %>
-              </div>
-            </div>
-          </div>
--->
+<!-- Footer -->
 
-<!-- 
-<p>
-  <b>Text:</b>
-  <%= @word.text_english %>
-</p>
-
-<p>
-  <b>Text Original:</b>
-  <%= @word.text_original %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @word.description %>
-</p>
-
-<p>
-  <b>Text image:</b>
-  <%= @word.text_image %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @word.image %>
-</p>
-
-<p>
-  <b>Audio:</b>
-  <audio controls>
-    <source src="<%= @word.audio %>" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</p>
-
-<p>
-  <b>Pdf:</b>
-  <%= @word.pdf %>
-</p>
-
-<p>
-  <b>Subtheme:</b>
-  <%= @word.subtheme_id %>
-</p>
-
-<p>
-  <b>Language:</b>
-  <%= @word.language_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_word_path(@word) %> |
-<%= link_to 'Back', words_path %>
--->
-
-  <!-- Footer -->
-  
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row">
-        <div class="large-6 columns">
-          <p>&copy; Copyright SFS Languages</p>
-        </div>
-        <!-- <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
-        </div> -->
+<footer class="row">
+  <div class="large-12 columns">
+    <hr />
+    <div class="row">
+      <div class="large-6 columns">
+        <p>&copy; Copyright SFS Languages</p>
       </div>
-    </div> 
-  </footer>
+      <!-- <div class="large-6 columns">
+        <ul class="inline-list right">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div> -->
+    </div>
+  </div> 
+</footer>
