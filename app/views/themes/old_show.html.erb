@@ -1,0 +1,125 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+ 
+          <div class="large-6 columns">
+ 
+            <h3 class="show-for-small"><%= @theme.name %><hr/></h3>
+ 
+            <div class="panel">
+              <h4 class="hide-for-small"><%= @theme.name %><hr/></h4>
+              <h5 class="subheader"><%= @theme.description %></h5>
+              <ul style="list-style:none;margin-bottom:0;">
+              <% @theme.documents.each do |d| %>
+                <li><%= link_to d.description, d.url, :class => "small button" %></li>
+              <% end %>
+              </ul>
+            </div>
+ 
+          <div class="row">
+            <% @theme.subthemes.each do |s| %>
+              <div class="large-6 small-6 columns">
+                <div class="panel">
+                  <h5><%= s.name %></h5>
+                <h6 class="subheader"><%= s.description %></h6>
+                <%= link_to 'Start!', subtheme_path(s), :class => "small button" %>
+                </div>
+              </div>
+            <% end %>
+              <!-- <div class="large-6 small-6 columns">
+                <div class="panel">
+                  <h5>Subtheme</h5>
+                <h6 class="subheader">Praesent placerat dui tincidunt elit suscipit sed.</h6>
+                <a href="#" class="small button">Start!</a>
+                </div>
+              </div> -->
+          </div>
+          <!-- <p>
+            <b>Download the Flashcard and Worksheet PDFs</b>
+            <ul style="list-style:none;margin-bottom:0;">
+            <% @theme.documents.each do |d| %>
+              <li style="float:left;margin-right:5px;"><%= link_to d.description, d.url, :class => "small button" %></li>
+            <% end %>
+            </ul>
+          </p> -->
+          </div>
+
+          <div class="large-6 columns">
+ 
+            <img src="<%= @theme.image %>"><br>
+ 
+          </div>
+        </div>
+ 
+ 
+ 
+      <!-- End Header Content -->
+ 
+ 
+      <!-- Search Bar -->
+ 
+        <!-- <div class="row">
+ 
+          <div class="large-12 columns">
+            <div class="radius panel">
+ 
+            <form>
+              <div class="row collapse">
+ 
+                <div class="large-10 small-8 columns">
+                  <input type="text" />
+                </div>
+ 
+                <div class="large-2 small-3 columns">
+                  <a href="#" class="postfix button expand">Search</a>
+                </div>
+ 
+              </div>
+            </form>
+ 
+          </div>
+          </div>
+ 
+        </div> -->
+ 
+      <!-- End Search Bar -->
+ 
+ 
+      <!-- Thumbnails -->
+ 
+        <!-- <div class="row">
+ 
+          <div class="large-12 show-for-small columns">
+          <h3>Header</h3><hr>
+        </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Word">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Word">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Word">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+          <div class="large-3 small-6 columns">
+            <img src="http://placehold.it/500x500&text=Word">
+            <div class="panel">
+              <p>Description</p>
+            </div>
+          </div>
+ 
+        </div> -->
+ 
+      <!-- End Thumbnails -->

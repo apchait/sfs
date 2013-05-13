@@ -3,6 +3,7 @@ class Subtheme < ActiveRecord::Base
 
   validates :name, :uniqueness => true
   belongs_to :theme
+  belongs_to :language
   has_many :words
   has_many :documents
 end
