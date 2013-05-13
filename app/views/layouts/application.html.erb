@@ -22,7 +22,7 @@
 <body>
 
   <!-- Nav Topbar -->
-  <%= render '/layouts/top_bar' %>
+  <%#= render '/layouts/top_bar' %>
   <div class="row">    
     <!-- Main Content Section -->
     <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
@@ -30,7 +30,7 @@
     	<%= yield %>
     </div>
     <!-- Nav Sidebar -->
-  	<%= render 'layouts/side_bar' %>
+  	<%#= render 'layouts/side_bar' %>
   </div>
     
   <!-- Footer -->
@@ -42,14 +42,14 @@
         <div class="large-6 columns">
           <p>&copy; Copyright SFS Languages 2013</p>
         </div>
-        <div class="large-6 columns">
+        <!-- <div class="large-6 columns">
           <ul class="inline-list right">
             <li><a href="#">Section 1</a></li>
             <li><a href="#">Section 2</a></li>
             <li><a href="#">Section 3</a></li>
             <li><a href="#">Section 4</a></li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div> 
   </footer>
