@@ -42,7 +42,7 @@
     </div>
     <div class="large-9 columns">
       <ul class="inline-list right">
-        <li><a href="/languages/1/">Spanish</a></li>
+        <li><%= link_to 'Spanish', language_path(Language.find_by_name('Spanish')) %></li>
         <li><a href="#">Section 2</a></li>
         <li><a href="#">Section 3</a></li>
         <li><a href="#">Section 4</a></li>
