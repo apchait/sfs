@@ -15,14 +15,14 @@
 	
 	<title><%= content_for?(:title) ? yield(:title) : "SFS Languages by Matt Schartow" %></title>
   	<%= javascript_include_tag "application" %>
-	<%= stylesheet_link_tag    "application" %>
-	<%= javascript_include_tag "vendor/custom.modernizr" %>
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
   	<%= csrf_meta_tags %>
 </head>
 <body>
 
   <!-- Nav Topbar -->
-  <%#= render '/layouts/top_bar' %>
+  <%= render '/layouts/top_bar' %>
   <div class="row">    
     <!-- Main Content Section -->
     <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
@@ -30,7 +30,7 @@
     	<%= yield %>
     </div>
     <!-- Nav Sidebar -->
-  	<%#= render 'layouts/side_bar' %>
+  	<%= render 'layouts/side_bar' %>
   </div>
     
   <!-- Footer -->
